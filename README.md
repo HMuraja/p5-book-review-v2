@@ -1,23 +1,21 @@
-# Book Review Application
-Your community for learning and sharing traditions of Italian cuisine
+# ReadRave a Book Review Application
+A platform and a community for readers that allows you to review books and follow other readers for recommendations.
 
-Don't Break the Spaghetti is a recipe book of traditional italian recipes. Users can register for the site in order to post a recipe, like or comment on other recipes. Site is for anyone interested of traditional Italian cuisine and acts as a community allowing users to interact one another.
-
-[View the active site here](https://dbts-recipe-app-f9995cb6b9df.herokuapp.com/)
-![Am I responsive view of the site](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/p4-am-i-responsive.png)
+[View the active site here]()
+![Am I responsive view of the site]()
 
 ## Project Goal
 ### Problem Statement
-Following problem statement was created for a imaginary user group:
-I am **a user** trying to **find an application where I can share my interest for traditional italian cuisine** but **I can't find one** because **most recipe sites are blogs or not spesific enought** which makes me feel **like there isn't anyone else interested of this subject**
+Following problem statement was created for an imaginary user group:
+I am **a user** trying to **find an application where I can share, read and follow conent about the books I like** but **I can't find one** because **other applications aren't specific enough** which makes me feel **like I can't share my passion for books with anyone**.
 
 ### Goals
 - Goal for this project is to provide a solution for the stated problem statement.
-- Build an online recipe book for traditional Italian Recipes.
-- Allow users to post and share recipes.
-- Any visitor should be able to view recipes.
-- Registered users should be able to share recipes with photo and a description.
-- Registered users should be able to like and comment on recipes.
+- Build an online platform for sharing revioes on books review for sharing, reading and following book reviews and other readers.
+- Allow users to post reviews, read reviews and follow readers alike.
+- All visitors to the page should be able to view reviews.
+- Registered users should be able to share a review with a photo, review content and review score.
+- Registered users should be able to like and comment on reviews.
 - Application should be responsive on different screen sizes.
 - Application should provide a simple intuitive interface that is easy to navigate.
 - Sites layout and colorscheme is pleasing and keeps users coming back to it.
@@ -26,25 +24,14 @@ I am **a user** trying to **find an application where I can share my interest fo
 ## Wireframes
 A wireframe for the home page was made using powerpoint.
 
-The design for the fron page needed to display multiple recipe cards, header with navigation menu on top, a footer with social media links and a button to share recipes(if logged in). This original wireframe incuded a search and filter tab above the recipes but it was not implemented. Each page of the site should have the same header and footer for each page. Mobile version design should have a dropdown icon for the navigation links.
-![Wireframe for the fron page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/p4-dbts-wireframe2.png)
-
-
-The design for the recipe should have dedicated areas for the image, summary(green section), description, ingerdients and method. Comments should be stacked under the recipe. The layout in the final product variated slightly, where the description, ingredients and method ended up being under one another. The button for editing and deleting the recipe ended up being below all the recipe content with the date of creation.
-![Wireframe for the recipe details](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/p4-dbts-wireframe1.png)
-
-The page for creating and editing was designed very roughly, with the decision that the form should fill the whole page for simplicity.
-![Wireframe for the form](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images//p4-dbts-wireframe5.png)
-
 ## Color Scheme
 
-Colorscheme for the project ended up being white, red, green,yellow, light grey and charcoal grey. White was used as background with light grey used some areas to highlight sections. Text was either charcoal or white depending on the background. Red, green and yellow to hightlight important sections. Bright highlighting colors were picked for their apetizing color that matched well the food images shared on the site without overwhelming the site.
-![Color Scheme for the Page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/coolors-colors-scheme.png)
+![Color Scheme for the Page]()
 
 ## Data Design
 A design for data was drafted using [diagrams.net](https://app.diagrams.net/).
 
-The data diagram had three models recipe user and comment. These three tables had foreign keys that connected the data accross the tables.
+The data diagram has 5 models user, profile, review, comment and like. 
 ![Color Scheme for the Page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/data-diagram.png)
 
 ## Agile Stragety
@@ -142,171 +129,108 @@ All together 5 user stories weren't implemented, you may see them on the project
 # Features
 
 ## Landing Page
-The home page or landing displays all the shared recipes as recipe cards. Page can diplay 6 recipes at a time and a "next-button" on the bottom can be used to move between the pages. Each recipe card displays an image of the recipe, or a placeholder image, recipe name, region and city and a summary of the recipe. In the upper corner of the image, the likes are displayed.
+The home page or landing displays all the shared review cards. All reviews are displayed one after each other and 10 reviews are downloaded at the time, and if user scrolls down more reviews are displayed. Each can diplay 6 recipes at a time and a "next-button" on the bottom can be used to move between the pages. Each review card displays an image of the reviewer, book/a placeholder, book title, and caption for the review. 
+![Landing page]()
 
-![Landing page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/landing-page.png)
+On the right hand side(desktop) or on the top of post(mobile) 5 most popular profiles are displayed.
+![Next button below recipe cards]()
 
-![Next button below recipe cards](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/footer-next-button.png)
+On the top of the posts you have a search bar enabling you to search reviews based on the title or author.
+![Next button below recipe cards]()
+
 
 ## Header/Navigation Menu
-The navigation menu and the title are placed on the header of the page and are the same for every page on the site. The navigation menu items are links to home, login and signup pages. The title "Don't Break The Spagetthi" is right below the navigation menu and also acts as a link to the home page.
+App icon and the navigation items are placed on the top of the application. The navigation menu items are links to home, feed, profile and signup pages. Navigatio options available for the viewer are login, signup and home. Icon works as a link to home page. 
  
-![Navigation menu](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/navigation-menu.png)
+![Navigation menu]()
 
 On Medium sized screens and smaller the menu collapses into a dropdown menu.
 
-![dropdown menu before](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/dropdown-menu-before.png)
+![dropdown menu before]()
 
-![dropdown menu after](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/dropdown-menu-after.png)
+![dropdown menu after]()
  
-## Recipe Page
-On the home page, hovering mouse over the recipe card will cause a shadow behind the recipe card and change in the text color.
+## Review Page
+If the user clicks on the book image, they are lead on to the review's page where user can read the review and view comments. 
 
-![image of selected recipe card and animation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/hover-over-recipe-card.png)
+![review page image]()
 
-Clicking anywhere on the image, takes the user to a page with the recipes details. This page can be divided into three sections on the top there is the image, name, author name, region and city of the recipe and the number of likes.
+If the logged in user is the owner of the review, a three dot icon appears and allows user to edit or delete the review.
 
-![recipe header](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/recipe-details.png)
+![Edit and Delete dopdown](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/recipe-details-2.png)
 
-Below the header you have the body of the recipe, ith most of the information. About section acts as a field for users explain more about the recipe. Ingredients and method are the sections where the more practical information is summarized. Inside the Ingredients there are also the servings and cooking time.
+On the bottom of the body the date of creation is detailed and the ciomment section starts. If user isn't logged in they may only view the the recipe details and any comments that other users have left.
+![Comments]()
 
-![Recipe body 2](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/recipe-details-2.png)
+Any users logged can use a leave a comment form to leave a comment and edit or delete any comments left.
 
-On the bottom of the body the date of creation is detailed and the ciomment section starts. If user isn't logged in they may only view the the recipe deails and any comments that other users have left.
+![Edit and Delete button and submit form]()
 
-![image of selected recipe card and animation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/recipe-comments.png)
-
-Any users logged in to the recipe page can view the recipe details and comments, but in addition there are edit and delete recipe and a 'leave acomment'-form at the bottom.
-
-![Edit and Delete button and submit form](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/edit-delete-comment-my-recipe.png)
-
-These buttons can be used to edit the recipe, but if you aren't logged in as the author, there will be an error message below this recipe stating that only the author of this recipe can edit or delete the recipe. If user attempts to edit the recipe as a non-author, user will redirected back to the recipe page.
-
-![Edit and Delete error](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/disabled-editing-buttons.png)
-
-## Comment
-
-If the user wishes to leave a comment, they must login first and click on the recipe they want to view. On the bottom of the page there is a 'Leave comment'-form that the logged in user can fill. User has to add only the text they wish to post and press submit, if the submission is succesful the the recipe page will refresh and the comment will appear on the top of the comment section. 
-
-Each comment will have the commentors username, time and date of tghe comment added automatically. After posting a comment, the user can't unfortunately delete or edit the comment any further, but they must contact the Admin in order to do this. 
-
-![image of selected recipe card and animation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/edit-delete-comment-my-recipe.png)
 
 ## Like
 
-If the user wants to like a recipe they have to log in and navigate to the recipe they like. On the recipe they must click on the heart icon, in order to like it or unlike it. The page will refresh and the number of likes will be updated and the heart icon will change depending on if the user liked (solid colored heart icon) or unliked (outlined icon). 
+If the user wants to like a review they have to log in and navigate to the review they like. On the review card they must click on the heart icon, in order to like it or unlike it. The page will refresh and the number of likes will be updated and the heart icon will change depending on if the user liked (solid colored heart icon) or unliked (outlined icon). 
 
-![Like before](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/liek%20-before.png)
+![Like before]()
 
-![Like after](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/like-after.png)
+![Like after]()
 
 ## Login
 
 If the user has already signed up and are logged out from their account they can press *Login* button on the navigation menu and a login window will open up.
 
-![Edit and Delete button and submit form](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/login.png)
+![Edit and Delete button and submit form]()
 
 User needs to enter username and their password and click submit. The login form will be validated and an error message will display if the login isn't succesful.
 
-Once the form is succesfully submitted the user is logged in and they can view the green "Logged in as >username<" tag on the navigation menu. Also, the navigation menu won't have items *Sign Up* or *Login* instead there are *Logout* and *Create Recipe* instead. In addtion a yellow "Share Recipe"-button will display above the recipe cards.
-
-![login succesful display](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/landing-page-after-login.png)
+Once the form is succesfully submitted the user is logged in and they can view the green "Logged in as >username<" tag on the navigation menu. Also, the navigation menu won't have items *Sign Up* or *Login* instead there are *Logout* and *Add Review* instead. 
+![login succesful display]()
 
 ## Signup
 
 If the user wan't to carry out any other functionalities on the site other than viewing data, they must create a account to do that. They can do it by clicking on the signup button on the navigation menu. This opens a signup form that the new user must fill.
 
-![Like after](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/signup-page.png)
+![]()
 
-They must add username and a password and a password confirmation. Email can be added, but is not required for creating a user account. Once all information is added, user must only press submit.
 
-If the form is not succesfully validated the form will display an error. The error message will instruct the user to update the fiedl with the error and then they can submit the form again.
-
-If succseful a new user instance will be created and their information will be saved onto the database. The user will be redirected to the frontpage and the navigation menu will display on a green background "Logged in as >username<", also instead of have menu items *Sign Up* or *Login* they will have *Logout* and *Create Recipe* instead. In addtion a yellow "Share Recipe"-button will display above the recipe cards.
 
 ## Logout
 
-When the user wishes to logout from their account they must click on the *Logout* button on the navigation menu. A new site will upload and display a confrimation message if the user wants to logout from the account.
+. 
 
-![Logout confirmation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/logout.png)
+## Add Reviw
 
-If the user confirms yes they will be logged out and if they state 'no' the user will be redirected back to the home page with a green green "Logged in as >username<" tag at the navigation menu and the *Share Recipe*-button. If the user logs out the view will miss the button to share recipes and navigation no longer states that the user is logged in. 
+If user wants to create a recipe they must click on the button at the navigation menu or the navigation link stating *Add Review*.
 
-## Create Recipe
+![image of selected recipe card and animation]()
 
-If user wants to create a recipe they must click on the yellow button above then recipe cards or the navigation link stating *Share Recipe*.
+Clicking the link or the button should open the page with the "Add a Review"-form. All the fields, title, author, caption, content and score, are mandatory. If the user won't select an image it will be replaced with a placeholder image.
 
-![image of selected recipe card and animation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/new-recipe-placeholder.png)
+![Share recipe form top]()
+![Share recipe form bottom]() 
 
-Clicking the link or the button should open the page with the "Share Recipe"-form. All the required fields, name, region, preparation time, description, ingredients and method, are marked with a '*', other fields are optional. If the user won't select an image it will be replaced with a placeholder image.
+A succesful submission will take the user to the review page.
 
-![Share recipe form top](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/share-recipe-1.png)
-![Share recipe form bottom](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/share-recipe-2.png) 
+![Share recipe form bottom]() 
 
-The region for the recipe can only be selected from the ones listed on the dropdown menu, also unknown and none are an option. It isn't possible to leave the field empty as it has been preselcted to be none.
+## Edit Review
 
-![Share recipe form bottom](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/select-a-region.png) 
-
-When the user submits the form, a validation will occur, if the required field have not been filled the form wont't be submitted and the first empty required field is highlighted. 
-
-A succesful submission will bring up a modul informing user of the succesful submission and request them to choose if they wish to return to the recipe views or to share a new recipe. The new recipe will be added to the database and showed on the home page as the first recipe card.
-
-![Share recipe form bottom](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/succesful-submission.png) 
-
-## Edit Recipe
-
-Only a logged in user and the author of the recipe can edit it. They have to click on the recipe they want to edit and then got to the bottom of the page where two buttons are displayed *Edit* and *Delete*. If the user is not the author they can still see the buttons but there will be red message above them stating "Only the author of this recipe can edit/delete the recipe". Clicking the buttons as non-author will lead only the recipe details page to be relaoded.
-
-Once the author clicks on the edit recipe button a edit recipe form will pop up. This form is the same as the 'Create Recipe'-form, the only difference is that the image field has an option to 'clear' the image available.
-
-![edit recipe form](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/edit-recipe-form.png)
-
-This has the same required field and validation a the create recipe so if any of the required fields is unfilled or incorrectly filled the form won't submit and highlight the first issue on the form.
-
-If the the edited form is succesfully submitted a message will pop-up stating that the recipe was succesfully edited. Then the user can choose to return to the recipe they just updated or they may return to the home page to view all recipes.
-
-![edit recipe succesful](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/Screenshot%202023-06-28%20152650.png)
-
-## Delete Recipe
-
-Only a logged in user and the author of the recipe can edit it. They have to click on the recipe they want to edit and then got to the bottom of the page where two buttons are displayed *Edit* and *Delete*. If the user is not the author they can still see the buttons but there will be red message above them stating "Only the author of this recipe can edit/delete the recipe". Clicking the buttons as non-author will lead only the recipe details page to be relaoded.
-
-Once the author clicks on delete recipe button, a modal pops up requesting author to confirm if they wish to delete the recipe or not. 
-
-![Deletion Confrimation](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/confirm-deletion.png)
-
-If they answer now thye will be redirected to the recipe page, but if they select yes, they will be lead to a page stating that the selected recipe was succesfully deleted and a button that they can press to return to home page.
-
-![Deletion Succesful page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/deletion-succesful.png)
-
-## Admin Comment, User and Recipe
-
-Anyone with admin right can login to the admin site by extending the url with "/admin". 
-
-![Navigation to the admin panel](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/admin-url.png)
-
-A login page will open. Admin must enter admin username and password succesfully to login.
-
-![Admin Login](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/admin-login.png)
-
-A admin panel site will open, with the overview. Here admin can create, update and delete (CRUD) User, Comment and Recipe data if needed. Admin Just needs to click on one the datagroup they want to manage in order to access the CRUD functionalities. 
-
-![Admin Panel](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/features/admin-panel.png) 
-
-## Features to be implemented in the future
-All together 5 features weren't installed in the end. These are deatailed in the user stories section and acceptance crieteria and tasks can be seen on the project board of this repositiory.
+## Delete Review
 
 # Technologies
 ## Languages
 HTML5 - Used on templates to build the structure of the sites and render an iterface.
 CSS3 - Used to add design to the html structure for more pleasing interface.
 Python - Used as the backend language.
+JavaScript - Used as the frontend language.
 
 ## Frameworks and Libraries
 Versions for all the libraries can be seen in the requirements.txt.
 
 - Django - Used as the fullstack framefork to build the website
+- Django Rest Framework - Used to build and interact with APIs
 - Bootstap- CSS library used to style the html together with custom css.
+- React.js - JS library used to build independent component based application.
 - psycopg2 - A PostgreSQL database adapter for Python.
 - gunicorn - A Python WSGI HTTP Server for UNIX.
 - cloudinary - Used to connect python with cloudniary storage for all the statuc files.
@@ -346,26 +270,8 @@ Following applications were used to make this project:
 Validators services where used to validate sites HTML and python code. JavaScript was not used during this project .
 
 ### W3C
-Site HTML was teststed using the [W3C HTML Markup Validation Service](https://validator.w3.org/). After the first run the validator showed warning about missing language attribute on the html tag. After language attribute was added, the site passed through the validator without any errors or warnings.
-
-Initial validation result.![initial html validation test](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/html-validation.png)
-
-Final validation result.![final html validation test](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/html-validation-final.png)
 
 ### CI Python Linter
-All python files in the *recipeapp*-folder were validated via the[CI Python Linter](https://pep8ci.herokuapp.com/). All files passed the validation without errors.
-
-Validation results from admin.py:![admin.py](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-admin-py.png)
-
-Validation results from apps.py:![apps.py:](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-apps-py.png)
-
-Validation results from forms.py:![forms.py:](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-forms-py.png)
-
-Validation results from models.py:![models.py:](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-models-py.png)
-
-Validation results from urls.py:![urls.py:](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-urls-py.png)
-
-Validation results from views.py:![views.py:](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/ci-python-linter-views-py.png)
 
 ## Tests on user stories
 Site was tested to confirm the acceptance criteria and tasks on the User Stories were full-filled. 
@@ -554,44 +460,20 @@ No bugs were found from the final product.
 
 # Deployment
 ## First Deployment
-The project was deployed in the beginning of the development. Following steps were taken with the first deployment:
-- Django and supporting libraries were installed.
-- File for the development environment, env.py, was created  and added to the .gitignore file. The env.py should include the following:
-    - Add 'import os' on the top of the file.
-    - os.environ["DATABASE_URL"] = "[your database URL goes here]"
-    - os.environ["SECRET_KEY"] = "[the secret key from that Django generates on the setting.py should be added here and reference to to it added to sertting.py]"
-    - os.environ["CLOUDINARY_URL"] = "[add cloudinary URL here ]"
-- Cloudinary storage was set up for the templates, static files and media files.
-- Procfile was created to declare gunicorn as the webserver.
-- A Heroku app was created and location set to EU.
-- In 'Settings' tab of the created apps dashboard Config Vars were added by clikcing 'Reveal Config Vars' and adding the following key-value pairs:
-    - CLOUDINARY_URL:           [Your cloudinary URL goes here]
-    - DATABASE_URL:             [Your Elephant SQL URL goes here]
-    - DISABLE_COLLECTSTATIC:    1
-    - PORT:                     8000
-    - SECRET_KEY:               [secret key would go here]
-- Within the 'Deploy'- tab 'Github' was selected  as the Deployemnt method and app was connected to the Github repository and Automatic deployes were enabled.
+
 
 ## Second Deployment
-Seond Deployement was done in the end of the project, once all changes had been saved to GitHub.
-- Start by setting 'DEBUG = False' on on setting.py of you project file.
-- Then add 'X_FRAME_OPTIONS = 'SAMEORIGIN'' on the settings.py, summernote won't work without this setting in Heroku.
-- Commit all changes now, this should be the final commit before deployment. 
-- In Heroku go to your project and then to settings and click 'Reveal Config Vars', remove disable  
-collect static environment variable.
-- Go to Activity tab and see if the project has deployed succesfully if not, click th 'View Build Log" and see what is the problem. 
-- After fixing the issue you can go to Deploy tab adnd Manually Deploye from barnch, if it fails a again see the build log and repeatthe process until project has deployed succesfully.
-- Click on 'Open App' and admire your work.
+
 
 # Credits
 Following resources were used to help build this project:
 - SVG icons were obtained from [Font Awesome](https://fontawesome.com/)
-- Source for recipes can be found from [vagrantsofttheworl.com](https://vagrantsoftheworld.com/traditional-italian-recipes-by-region/) and [tasteatlas](https://www.tasteatlas.com/amatriciana/recipe)
-- Images are from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/), [vagrantsofttheworl.com](https://vagrantsoftheworld.com/traditional-italian-recipes-by-region/) and [tasteatlas](https://www.tasteatlas.com/amatriciana/recipe).
-- Code Institutes walk through process "I Think Therefore I Blog" was used as an inspiration for this project.
+- Images and content for the reviews was taken from []()
+- Placeholder image was taken from [Pexels](https://www.pexels.com/)
+- Code Institutes walk through process "Moments" was used as an inspiration for this project.
 - [Django Docs](https://docs.djangoproject.com/en/4.2/) were used through out the process to solve issues and used for guidance.
 - [Bootsrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) were used through out the process to solve issues and used for guidance.
-- [Summernote Docs](https://summernote.org/deep-dive/) were used through out the process to solve issues and used for guidance.
+- [React Docs](https://legacy.reactjs.org/) were used through out the process to solve issues and used for guidance.
 
 
 
