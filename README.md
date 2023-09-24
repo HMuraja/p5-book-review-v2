@@ -7,6 +7,7 @@ A platform and a community for readers that allows you to review books and follo
 ## Project Goal
 ### Problem Statement
 Following problem statement was created for an imaginary user group:
+
 I am **a user** trying to **find an application where I can share, read and follow conent about the books I like** but **I can't find one** because **other applications aren't specific enough** which makes me feel **like I can't share my passion for books with anyone**.
 
 ### Goals
@@ -24,15 +25,23 @@ I am **a user** trying to **find an application where I can share, read and foll
 ## Wireframes
 A wireframe for the home page was made using powerpoint.
 
+(Fron Page)[https://github.com/HMuraja/p5-book-review/blob/main/readme/wireframes/wireframe-home-page-desktop.png]
+
 ## Color Scheme
 
-![Color Scheme for the Page]()
+- Charcoal : Text, borders and details
+- Mint Green : Logo, Highlights
+- Coral Red : Logo, Highlights
+- White : Background and models
+- Smoke White/Grey : Background
+
+![Color Scheme for the Page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/color-schema.png)
 
 ## Data Design
 A design for data was drafted using [diagrams.net](https://app.diagrams.net/).
 
 The data diagram has 5 models user, profile, review, comment and like. 
-![Color Scheme for the Page](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/images/data-diagram.png)
+![entity relationship diagram](https://github.com/HMuraja/p4-recipe-book/blob/main/readme/entity-relationship-diagram.png)
 
 ## Agile Stragety
 Agile methodologies were applied in the development process of this project. Following principles were followed durint he process:
@@ -47,21 +56,35 @@ Agile methodologies were applied in the development process of this project. Fol
 User Stories were made using the Github _Issues_ feature. Each issue equated a User Story. Each Issue was tagged with a lable, a Github Issues feature, based on it's importance for the application. Following labels were created (listed in order of importance): 
 - Must have
 - Should have
-- Could-Have
-- Won't-Have
+- Could have
+- Nice to have
 
 Issues were added on the Github Projects Boards, a builtin management tool from GitHub, as tasks. The implementation of the features was tracked by moving the tasks on each of the boards column. Three columns were named: Todo, InProgress and Done.
 
-### User Stories
-All together 15 user stories were drafted and Acceptance Criteria together with Tasks were created. 
+All together **number** user stories were drafted and Acceptance Criteria together with Tasks were created. View all user stories on the repository issues or on the project board [@P5 Book Review App Kanban](https://github.com/users/HMuraja/projects/5/views/1).
 
-**IMPLEMENTED USER STORIES**
+### BACKEND
+Following **9** user stories were implemented during the development of the backedn API.
 
-Following **number** user stories were implemented during the development. You can see them on the done column of this repository's project board.
-
-| Title                     | Story                                                                                                                                        | Tags                | Implemented |
+| Title                     | Story                                                                                                                                        | Priority               | Implemented |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------- |
-| Profile Summary - Backend | As a \*\*user/viewer\*\* I can \*\*view anyone's profile details\*\* so that \*\*I can see a summary of their interactions and activity\*\*. | Backend, Could Have | No          |
+| Profile Model | As a **user/viewer** As a **user** I can **view, edit and delete my profile** so that **I can personalize my account and view my data** | Must Have | No |
+| Review Model | As a **user** I can **create, edit and delete review** so that **I can share a review on books l have read** | Must Have | No          |
+| Comment Model | As a **user** I can **easily create a comment and edit/delete it if i want to ** so that **I discuss of any reviews I am interested of**| Must Have | No  |
+| View Comment Instance | As a **viewer** I can **easily see comments other have made to the review** so that **I can see what other people though about the review**| Should Have | No          |
+| Like Model | As a **user** I can **boost the reviews I think are good** so that **I can have an impact on the quality of the reviews posted**| Should Have | No          |
+| Like Feed | As a **user** I can **view the reviews I liked** so that **I can find easily any reviews that I liked** | Should Have | No          |
+| Follow Model | As a **user** I can **follow users that I like** so that **I modify my personal feed to include reviews from users I like** | Could Have | No          |
+| Authentication - Backend | As a **user** I can **easily login and logout** so that **I can access the content and be recognized as a logged in user by the application**.| Could Have | No          |
+| Profile Summary - Backend | As a **user/viewer** I can **view anyone's profile details** so that **I can see a summary of their interactions and activity**. | Could Have | No          |
+
+
+### FRONEND
+Following **number** user stories were implemented during the development of the fronend interface. 
+
+| Title                     | Story                                                                                                                                        | Priority               | Implemented |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------- |
+|  | |  |   |
 
 
 # Features
@@ -212,10 +235,148 @@ Validators services where used to validate sites HTML and python code. JavaScrip
 ## Tests on user stories
 Site was tested to confirm the acceptance criteria and tasks on the User Stories were full-filled. 
 
+### USER STORY: Profile Summary - Backend
+
+As a **user** I can **view, edit and delete my profile** so that **I can personalize my account and view my data**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** User can add username, password and profile image to their profile.
+- [ ]  **Acceptance Criteria 2:** A placeholder image is added initially when profile is created.
+- [ ] **Acceptance Criteria 3:** Profile summarizes all the profiles followed, number of liked reviews and made number of reviews made.
+- [ ] **Acceptance Criteria 4:** Profile has a description field that the user can add.
+
+*Tasks**
+
+- [ ] No tasks yet
+
+
+
+### USER STORY: Profile Model
+
+As a **user** I can **view, edit and delete my profile** so that **I can personalize my account and view my data**
+
+*Acceptance Criteria*:
+- [ ] **Acceptance Criteria 1:** User can add username, password and profile image to their profile.
+- [ ]  **Acceptance Criteria 2:** A placeholder image is added initially when profile is created.
+- [ ] **Acceptance Criteria 3:** Profile summarizes all the profiles followed, number of liked reviews and made number of reviews made.
+- [ ] **Acceptance Criteria 4:** Profile has a description field that the user can add.
+
+*Tasks*
+
+- [ ] No tasks yet
+***
+*User Story: Review Model
+
+As a **user** I can **create, edit and delete review** so that **I can share a review on books l have read**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** User can create and delete a review.
+- [ ]  **Acceptance Criteria 2:** User can edit the title, caption, content and image.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: Comment Model
+
+As a **user** I can **easily create a comment and edit/delete it if i want to ** so that **I discuss of any reviews I am interested of**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** User can add a comment to a review they like.
+- [ ]  **Acceptance Criteria 2:** Review id is added automatically to the comment instance.
+- [ ] **Acceptance Criteria 3:** User can edit or delete an comment instance they made.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: View Comment Instance
+
+As a **viewer** I can **easily see comments other have made to the review** so that **I can see what other people though about the review**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** List all comment instances.
+- [ ]  **Acceptance Criteria 2:** Filter comment instances based on the review.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: Like Model
+As a **user** I can **boost the reviews I think are good** so that **I can have an impact on the quality of the reviews posted**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** Logged in user can create and delete an like instance
+- [ ]  **Acceptance Criteria 2:** Creating an instance automatically adds the liked review id to the like field.
+
+*Tasks*
+
+- [ ] No tasks yet.
+
+***
+### User Story: Like Feed
+
+As a **user** I can **view the reviews I liked** so that **I can find easily any reviews that I liked**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** All like instances are listed.
+- [ ]  **Acceptance Criteria 2:** Like instance list can be filtered according to the owner of the instance.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: Follow Model
+As a **user** I can **follow users that I like** so that **I modify my personal feed to include reviews from users I like**
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** Followed field and following fields of the instance should be unique pairs in order to avoid duplicate follows from one person.
+- [ ]  **Acceptance Criteria 2:** Users can easily create follow instance and delete it.
+- [ ] **Acceptance Criteria 3:** User id is automatically added to the following field in creation.
+- [ ] **Acceptance Criteria 4:** All follow ids can be listed and filtered according to the following field user id.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: Profile Summary
+
+As a **user/viewer** I can **view anyone's profile details** so that **I can see a summary of their interactions and activity**.
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** List all reviews for the specified user profile. 
+- [ ]  **Acceptance Criteria 2:** List all the followed ids for the specified user profile.
+- [ ] **Acceptance Criteria 3:** List all the follower ids for the specified user profile.
+
+*Tasks*
+
+- [ ] No tasks yet
+
+***
+### User Story: Authentication - Backend
+As a **user** I can **easily login and logout** so that **I can access the content and be recognized as a logged in user by the application**.
+
+*Acceptance Criteria:*
+- [ ] **Acceptance Criteria 1:** An instance of user and profile model class are created when user signs up.
+- [ ] **Acceptance Criteria 1:** Users id is automatically added to any of the instances they create.
+- [ ] **Acceptance Criteria 1:** Users can't create instances without being logged in.
+
+*Tasks*
+
+- [ ] On  creation of a new user instance a new profile model instance is created.
+- [ ] Add user id as the foreign key owner fields on review, like, profile and comment when they create an instance.
+- [ ] Add user id as foreign key into the following_id field, when they create an instance.
+***
+
 ### USER STORY: 
 As a **user** I can **what** so that **what**
 
-### Acceptance Criteria:
+*Acceptance Criteria:*
 - **Acceptance Criteria 1:** 
 - **Acceptance Criteria 2:** 
 - **Acceptance Criteria 3:** 
