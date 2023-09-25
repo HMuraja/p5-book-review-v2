@@ -1,5 +1,6 @@
 from django.db.models import Count
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from rr_api.permissions import IsOwnerOrReadOnly
 from .models import Review
 from .serializers import ReviewSerializer
@@ -20,6 +21,27 @@ class ReviewList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+    
+    filter_backends = [
+        filters.OrderingFilter,
+        filters.SearchFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        'owner__followed__owner__profile',
+        'likes__owner__profile',
+        'owner__profile',
+    ]
+    search_fields = [
+        'owner__username',
+        'book_title',
+        'book_author',
+    ]
+    ordering_fields = [
+        'likes_count',
+        'comments_count',
+        'likes__created_at',
+    ]
 
 
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
