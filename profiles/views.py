@@ -1,15 +1,13 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework import generics
 from .models import Profile
 from .serializers import ProfileSerializer
 
 
-class ProfileList(APIView):
+class ProfileList(generics.ListAPIView):
     """
-    List all profiles
-    No Create view (post method), as profile creation handled by django signals
+    Extends genric views from rest framework.
+    Using ListAPIView as using get method only
+    profile methods are created when new user signsup.
     """
-    def get(self, request):
-        profiles = Profile.objects.all()
-        serializer = ProfileSerializer(profiles, many=True)
-        return Response(serializer.data)
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
