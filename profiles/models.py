@@ -7,7 +7,7 @@ class Profile(models.Model):
     """
     Profile model extends models.Model class.
     When new user signs-up as new user is made,
-    signal ran, "post_save.connect", and 'create_profile' 
+    signal ran, "post_save.connect", and 'create_profile'
     function is ran and a new instance of Profile class is created.
     """
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
