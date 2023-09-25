@@ -13,6 +13,8 @@ class ReviewSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     comments_count = serializers.ReadOnlyField()
+    like_id = serializers.SerializerMethodField()
+    likes_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -31,11 +33,21 @@ class ReviewSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
+    def get_like_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            liked = Like.objects.filter(
+                owner=user, review=obj
+            ).first()
+            return liked.id if liked else None
+        return None
+
     class Meta:
         model = Review
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'book_title', 'book_author', 'caption',
             'book_category', 'review_body', 'image',
-            'rating', 'created_at', 'updated_at', 'comments_count'
+            'rating', 'created_at', 'updated_at', 'comments_count',
+            'likes_count', 'like_id',
         ]
