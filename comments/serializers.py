@@ -22,3 +22,12 @@ class CommentSerializer(serializers.ModelSerializer):
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
             'review', 'created_at', 'updated_at', 'content'
         ]
+
+
+class CommentDetailSerializer(CommentSerializer):
+    """
+    Serializer used to seriliaze Comment instance
+    data for detail view.
+    Review is a read only field.
+    """
+    review = serializers.ReadOnlyField(source='review.id')
