@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Post(models.Model):
+class Review(models.Model):
     """
-    Post model, related to 'owner', i.e. a User instance.
+    Review model, related to 'owner', i.e. a User instance.
     Default image set so that we can always reference image.url.
     """
     book_category_choices = [
@@ -40,7 +40,7 @@ class Post(models.Model):
     )
     review_body = models.TextField()
     image = models.ImageField(
-        upload_to='images/', default='/default_post_rgq6aq', blank=True
+        upload_to='images/', default='/review_placeholder_tceebf', blank=True
     )
     rating = models.CharField(
         max_length=32, choices=rate_choices, default=5

@@ -1,3 +1,18 @@
-from django.shortcuts import render
+from rest_framework import generics, permissions
+from rr_api.permissions import IsOwnerOrReadOnly
+from .models import Review
+from .serializers import ReviewSerializer
 
-# Create your views here.
+
+class ReviewList(generics.ListCreateAPIView):
+    """
+    List reviews or create a review if logged in
+    The perform_create method associates
+    the reviews with the logged in user.
+    """
+    serializer_class = ReviewSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = Review.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
