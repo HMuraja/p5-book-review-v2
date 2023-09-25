@@ -15,6 +15,7 @@ class Review(models.Model):
         ('horror', 'Horror'),
         ('sciencefiction', 'Science Fiction'),
         ('biography', 'Biography'),
+        ('memoir', 'Memoir'),
         ('fantasy', 'Fantasy'),
         ('thriller', 'Thriller'),
         ('childrensliterature', "Children's Literature"),
@@ -34,13 +35,15 @@ class Review(models.Model):
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     book_title = models.CharField(max_length=255)
+    book_author = models.CharField(max_length=255)
     caption = models.CharField(max_length=255)
     book_category = models.CharField(
         max_length=32, choices=book_category_choices, default='other'
     )
     review_body = models.TextField()
     image = models.ImageField(
-        upload_to='images/', default='/review_placeholder_tceebf', blank=True
+        upload_to='images/', default='/review_placeholder_tceebf.jpg',
+        blank=True
     )
     rating = models.CharField(
         max_length=32, choices=rate_choices, default=5

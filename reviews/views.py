@@ -16,3 +16,13 @@ class ReviewList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve a review and edit or delete it.
+    Editing or deleting requires user to be the owner and logged in.
+    """
+    serializer_class = ReviewSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+    queryset = Review.objects.all()
