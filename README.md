@@ -399,8 +399,31 @@ As a **user** I can **what** so that **what**
 
 
 # Deployment
-## First Deployment
+## API Deployment
+Once API was built it was deployed in Heroku. 
+1. Propr to deploying the JWT tokens were installed, so they could be used process environment. 'dj_rest_auth" was installed to enable user registration.
 
+2. The rr_api settings were changed so that database for process environment would be ElephantSQL. ElephantSQL account was created and the URL added to the env.py. 
+
+3. The env.py data was updated to look as follows:
+
+        import os
+        os.environ['CLOUDINARY_URL'] = ('cloudinary:/...')
+        os.environ['ALLOWED_HOST'] = ('https://read-rave-86b7234dccae.herokuapp.com')
+        os.environ['SECRET_KEY'] = ('django-insecure-...')
+        os.environ['DATABASE_URL'] = ('postgres://...')
+
+4. In Heroku a new app called 'read-rave' was created. In *settings* of the created app Config Vars key value pairs were set to be as displayed below:
+        
+        KEY: ALLOWED_HOST           VALUE: https://read-rave-86b7234dccae.herokuapp.com/
+        KEY: CLOUDINARY_URL         VALUE: cloudinary:/...
+        KEY: DATABASE_URL           VALUE: postgres://...
+        KEY: DISABLE_COLLECTSATIC   VALUE: 1
+        KEY: SECRET_KEY             VALUE: django-insecure-...
+
+5. In *Deploy* tab of the app *Deployement* method was selected to be GitHUb.
+6. *App connected to GitHub* was selected to the the *p5-book-review*.
+7. On *Manual Deploy* Deploye Branch was clicked to deploye the API.
 
 ## Second Deployment
 
