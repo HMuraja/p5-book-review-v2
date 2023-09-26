@@ -21,7 +21,7 @@ class ReviewList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
-    
+
     filter_backends = [
         filters.OrderingFilter,
         filters.SearchFilter,
