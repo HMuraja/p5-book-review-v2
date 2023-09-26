@@ -1,4 +1,5 @@
 import './App.css';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <h1>
         This is Read Raves Frontend
       </h1>
+      <Button variant="primary">Primary</Button>
     </div>
   );
 }
