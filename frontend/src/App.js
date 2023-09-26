@@ -1,13 +1,13 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
+      < NavBar />
       <h1>
-        This is Read Raves Frontend
+        Welcome to Read Rave!
       </h1>
-      <Button variant="primary">Primary</Button>
     </div>
   );
 }
