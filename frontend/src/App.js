@@ -56,12 +56,7 @@ function App() {
           <Route
               render={() => <p>Page not found!</p>}
             />
-          <Route
-              exact
-              path="/reviews/profiles/edit"
-              render={() => <h1> Edit profile </h1>}
-          />
-          
+         
         </Switch>
       </Container>
     </div>
