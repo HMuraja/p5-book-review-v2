@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
+import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
 
 function App() {
 
@@ -35,8 +36,8 @@ function App() {
             />
           <Route
               exact
-              path="/reviews/reviews/create"
-              render={() => <h1> Write review !</h1>}
+              path="/reviews/create"
+              render={() => <ReviewCreateForm />}
             />
           <Route
               exact

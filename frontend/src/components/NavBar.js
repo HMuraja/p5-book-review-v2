@@ -22,9 +22,19 @@ const NavBar = () => {
     }
   };
 
-    const loggedInIcons = (
-      <>
-     <NavLink
+  const addPostIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/reviews/create"
+    >
+      <i className="far fa-plus-square"></i>Add post
+    </NavLink>
+  );
+
+  const loggedInIcons = (
+    <>
+      <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/feed">
@@ -54,10 +64,9 @@ const NavBar = () => {
         <Avatar src={currentUser?.profile_image} text={`${currentUser?.profile_owner}`} height={40} />
 
       </NavLink>
-
     </>
 
-    );
+  );
 
     const loggedOutIcons = (
       <>
@@ -88,7 +97,7 @@ const NavBar = () => {
                     <img src={logo} alt="logo" height="60" />
                 </Navbar.Brand>
             </NavLink>
-            
+            {currentUser && addPostIcon}
             <Navbar.Toggle
               ref={ref}
               onClick={() => setExpanded(!expanded)}
