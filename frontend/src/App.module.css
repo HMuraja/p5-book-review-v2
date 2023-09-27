@@ -5,14 +5,14 @@
 }
   
 .Main {
- padding-top: 120px;
+ padding-top: 100px;
 }
 
 .Content {
     background-color: #ffffff;
     padding: 10px;
-    border-radius: 2px;
-    border: 1px solid #dadadf;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
 }
 
 .FillerImage {
@@ -32,7 +32,7 @@
 }
 
 a {
-    color: #d2d2d2;
+    color: #797979;
     transition: color ease-in-out 0.3s;
 }
 
@@ -50,7 +50,7 @@ input[type="file"] {
 }
 
 i {
-    color: #d2d2d2;
+    color: #797979;
     font-size: 1.6rem;
     padding: 7px;
     vertical-align: middle;

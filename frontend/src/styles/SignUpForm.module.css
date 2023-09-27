@@ -1,0 +1,68 @@
+.Row {
+    height: 80vh;
+    width: 100%;
+    font-family: 'Athiti', sans-serif;
+    border-radius: 15px;
+  }
+
+.Background {
+    background-image: url("https://res.cloudinary.com/dyoueyepq/image/upload/v1695771152/media/auth-background_phyhyo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Input {
+  border: 1px solid #f0f1f9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #F5F5F5;
+  text-align: center;
+  padding: 10px;
+}
+
+.Input:active{
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: #F5F5F5;
+}
+
+.Input:hover{
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: #F5F5F5;
+  cursor: pointer;
+}
+
+.Input:focus{
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: #F5F5F5;
+  border: none;
+}
+
+.Header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:#ec5656;
+  ;
+}
+  
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+  
+.Link span {
+  color:#ec5656;;
+}
+  
+.Container {
+  padding: 30px 10px;
+}
+
