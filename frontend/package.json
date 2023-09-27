@@ -1,5 +1,5 @@
 {
-  "name": "moments",
+  "name": "read-rave",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,11 +43,13 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "msw": "^0.35.0"
   },
+  "proxy": "http://localhost:8000/",
   "engines": {
     "node": "16.19.1",
     "npm": "8.19.3"
-  },
-  "proxy": "http://localhost:8000/"
+  }
+  
 }
