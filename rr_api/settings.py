@@ -108,9 +108,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#          os.environ.get('CLIENT_ORIGIN'),
-#     ]
+CORS_ALLOWED_ORIGINS = [
+         os.environ.get('CLIENT_ORIGIN'),
+    ]
 
 CORS_ALLOW_CREDENTIALS = True
 
