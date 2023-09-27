@@ -6,6 +6,7 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
+import ReviewPage from "./pages/reviews/ReviewPage";
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
           <Route
               exact
               path="/reviews/:id"
-              render={() => <h1> View review details! </h1>}
+              render={() => <ReviewPage />}
             />
           <Route
               exact
@@ -51,7 +52,7 @@ function App() {
           />
           <Route
               exact
-              path="/reviews/profiles/edit"
+              path="/reviews"
               render={() => <h1> Edit profile </h1>}
           />
           <Route
