@@ -20,9 +20,9 @@
 
 .UnFollowBtn:focus {
   cursor: pointer;
-  background-color: aliceblue;
-  color: #242a3d;
-  border: none;
+  background-color: #479b78;
+  color: #ffffff;
+  border: none !important;
 }
 
 .FollowBtn {
@@ -43,7 +43,7 @@
 
 .FollowBtn:focus {
   cursor: pointer;
-  background-color: #479b78;
-  color: #ffffff;
-  border: none;
+  background-color: aliceblue;
+  color: #242a3d;
+  border: none !important;
 }
