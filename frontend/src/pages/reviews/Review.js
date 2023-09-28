@@ -119,7 +119,6 @@ const Review = (props) => {
                             <Card.Subtitle className="mb-2 text-muted mb-3">{book_author}</Card.Subtitle>}
                         {book_category!=="other" && 
                             <Card.Subtitle className="mb-2 text-muted mb-3">{book_category}</Card.Subtitle>}
-                            {console.log(book_category)}
                         {caption && 
                             <Card.Text className="text-muted text-start mb-4">- {caption}</Card.Text>}
                         {rating && 

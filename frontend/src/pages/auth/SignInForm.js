@@ -13,7 +13,7 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignUpInForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 const SignInForm = () => {
   const setCurrentUser = useSetCurrentUser();
@@ -42,7 +42,6 @@ const SignInForm = () => {
         const {data} = await axios.post("/dj-rest-auth/login/", SignInData);
         setCurrentUser(data.user);
         history.push("/");
-        console.log(useCurrentUser)
       } catch (err) {
         setErrors(err.response?.data);
       }
