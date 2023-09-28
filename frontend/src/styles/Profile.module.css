@@ -2,7 +2,7 @@
     word-break: break-all;
   }
 
-.FollowBtn{
+.UnFollowBtn{
   border: none;
   background-color: #479b78;
   color: #ffffff;
@@ -12,8 +12,38 @@
   margin: 5px;
 }
 
-.FollowBtn:hover {
+.UnFollowBtn:hover {
   cursor: pointer;
   background-color: aliceblue;
   color: #242a3d;
+}
+
+.UnFollowBtn:focus {
+  cursor: pointer;
+  background-color: aliceblue;
+  color: #242a3d;
+  border: none;
+}
+
+.FollowBtn {
+  border: none;
+  background-color: aliceblue;
+  color: #242a3d;
+  border-radius: 100px;
+  padding: 4px 10px;
+  min-width: 75px;
+  margin: 5px;
+}
+
+.FollowBtn:hover {
+  cursor: pointer;
+  background-color: #479b78;
+  color: #ffffff;
+}
+
+.FollowBtn:focus {
+  cursor: pointer;
+  background-color: #479b78;
+  color: #ffffff;
+  border: none;
 }
