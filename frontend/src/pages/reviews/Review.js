@@ -34,12 +34,12 @@ const Review = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/posts/${id}/edit`);
+    history.push(`/reviews/${id}/edit`);
   };
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/posts/${id}/`);
+      await axiosRes.delete(`/reviews/${id}/`);
       history.goBack();
     } catch (err) {
       console.log(err);
@@ -120,6 +120,7 @@ const Review = (props) => {
                             <Card.Subtitle className="mb-2 text-muted mb-3">{book_author}</Card.Subtitle>}
                         {book_category!=="other" && 
                             <Card.Subtitle className="mb-2 text-muted mb-3">{book_category}</Card.Subtitle>}
+                            {console.log(book_category)}
                         {caption && 
                             <Card.Text className="text-muted text-start mb-4">- {caption}</Card.Text>}
                         {rating && 

@@ -9,6 +9,7 @@ import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
 import ReviewPage from "./pages/reviews/ReviewPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ReviewsPage from "./pages/reviews/ReviewsPage";
+import ReviewEditForm from "./pages/reviews/ReviewEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -52,7 +53,7 @@ function App() {
             <Route exact path="/signout" component={() => <h1>Signout</h1>} />
             <Route exact path="/reviews/create" component={ReviewCreateForm} />
             <Route exact path="/reviews/:id" component={ReviewPage} />
-            <Route exact path="/reviews/:id/edit" component={() => <h1>Edit review!</h1>} />
+            <Route exact path="/reviews/:id/edit" component={ReviewEditForm} />
             <Route exact path="/reviews" component={() => <h1>Edit profile</h1>} />
             <Route component={() => <p>Page not found!</p>} />
         </Switch>
