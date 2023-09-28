@@ -6,7 +6,6 @@ import { Link, useHistory} from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
-// import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Review = (props) => {
   const {
@@ -40,7 +39,7 @@ const Review = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/reviews/${id}/`);
-      history.goBack();
+      history.push("/");
     } catch (err) {
       console.log(err);
     }
