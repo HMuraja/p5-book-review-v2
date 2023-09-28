@@ -234,7 +234,7 @@ function ReviewEditForm() {
               </figure>
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                  className={`${btnStyles.Button} ${btnStyles.Bright} btn`}
                   htmlFor="image-upload"
                 >
                   Change the image
