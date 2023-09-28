@@ -13,6 +13,7 @@ import Comment from "../comments/Comment";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import InfiniteScroll from "react-infinite-scroll-component";
+import PopularProfiles from "../profiles/PopularProfiles";
 import { fetchMoreData } from "../../utils/utils";
 
 function ReviewPage() {
@@ -43,6 +44,7 @@ function ReviewPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <PopularProfiles mobile />
         <Review {...review.results[0]} setReviews={setReview} reviewPage />
         <Container className={appStyles.Content}>
           <h3 className="text-center mb-3 text-muted">Comments</h3>
@@ -80,6 +82,7 @@ function ReviewPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+        <PopularProfiles />
       </Col>
     </Row>
   );

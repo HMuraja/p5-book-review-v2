@@ -1,0 +1,19 @@
+.WordBreak {
+    word-break: break-all;
+  }
+
+.FollowBtn{
+  border: none;
+  background-color: #479b78;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 4px 10px;
+  min-width: 75px;
+  margin: 5px;
+}
+
+.FollowBtn:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  color: #242a3d;
+}
