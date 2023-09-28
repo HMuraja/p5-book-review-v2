@@ -15,50 +15,15 @@ function App() {
       < NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route
-              exact
-              path="/"
-              render={() => <h1> Home page </h1>}
-            />
-          <Route
-              exact
-              path="/signin"
-              render={() => <SignInForm/>}
-            />
-          <Route
-              exact
-              path="/signup"
-              render={() => <SignUpForm/>}
-            />
-          <Route
-              exact
-              path="/signout"
-              render={() => <h1> Signout </h1>}
-            />
-          <Route
-              exact
-              path="/reviews/create"
-              render={() => <ReviewCreateForm />}
-            />
-          <Route
-              exact
-              path="/reviews/:id"
-              render={() => <ReviewPage />}
-            />
-          <Route
-              exact
-              path="/reviews/:id/edit"
-              render={() => <h1> Edit review! </h1>}
-          />
-          <Route
-              exact
-              path="/reviews"
-              render={() => <h1> Edit profile </h1>}
-          />
-          <Route
-              render={() => <p>Page not found!</p>}
-            />
-         
+          <Route exact path="/" component={() => <h1>Home page</h1>} />
+          <Route exact path="/signin" component={SignInForm} />
+          <Route exact path="/signup" component={SignUpForm} />
+          <Route exact path="/signout" component={() => <h1>Signout</h1>} />
+          <Route exact path="/reviews/create" component={ReviewCreateForm} />
+          <Route exact path="/reviews/:id" component={ReviewPage} />
+          <Route exact path="/reviews/:id/edit" component={() => <h1>Edit review!</h1>} />
+          <Route exact path="/reviews" component={() => <h1>Edit profile</h1>} />
+          <Route component={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
     </div>
