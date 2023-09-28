@@ -15,8 +15,10 @@ import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert, Image } from "react-bootstrap";
 import Asset from "../../components/Asset";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function ReviewCreateForm() {
+  useRedirect("loggedOut")
 
   const [errors, setErrors] = useState({});
 
