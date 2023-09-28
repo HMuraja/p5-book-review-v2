@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
-// import Review from "./Review";
+import Review from "./Review";
 
 function ReviewPage() {
   const { id } = useParams();
@@ -24,7 +24,7 @@ function ReviewPage() {
         setReview({ results: [review] });
         console.log(review)
       } catch (err) {
-        // console.log(err);
+            console.log(err);
       }
     };
 
@@ -34,7 +34,7 @@ function ReviewPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        {/* <Review {...review.results[0]} setReviews={setReview} reviePage /> */}
+        <Review {...review.results[0]} setReviews={setReview} reviewPage />
         <Container className={appStyles.Content}>
             <span>No comments... yet</span>
         </Container>

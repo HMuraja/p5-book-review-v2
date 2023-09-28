@@ -1,0 +1,55 @@
+.Review {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .Review figure,
+  h5 {
+    margin: 0 0;
+  }
+  
+  .Heart {
+    color: #f85032;
+  }
+  
+  .Heart:hover {
+    color: #595b60;
+  }
+  
+  .HeartOutline:hover {
+    color: #f85032;
+  }
+
+  .Star {
+    color: #e8b305;
+  }
+
+  .ReviewTitle{
+    text-align: left;
+  }
+  .ReviewBar{
+    text-align: right;
+  }
+
+  .ReviewSummary{
+    background-color: #F5F5F5;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+
+  @media (max-width: 992px) {
+    .HideOnSmallScreen{
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 992px) {
+    .HideOnLargeScreen{
+      display: none;
+    }
+  }
