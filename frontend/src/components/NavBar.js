@@ -18,7 +18,6 @@ const NavBar = () => {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -61,7 +60,7 @@ const NavBar = () => {
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}>
           
-        <Avatar src={currentUser?.profile_image} text={`${currentUser?.profile_owner}`} height={40} />
+        <Avatar src={currentUser?.profile_image} text= "My Profile" height={40} />
 
       </NavLink>
     </>

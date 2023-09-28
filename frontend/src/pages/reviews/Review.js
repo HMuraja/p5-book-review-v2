@@ -25,9 +25,9 @@ const Review = (props) => {
     setReviews,
     likes_count,
     like_id,
+    comments_count,
   } = props;
 
-  const comments_count = 3
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -39,7 +39,7 @@ const Review = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/reviews/${id}/`);
-      history.push("/");
+      history.goBack();
     } catch (err) {
       console.log(err);
     }

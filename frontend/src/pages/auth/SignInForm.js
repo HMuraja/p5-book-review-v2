@@ -15,38 +15,40 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
+import { setTokenTimestamp } from "../../utils/utils";
 
-const SignInForm = () => {
+function SignInForm () {
   const setCurrentUser = useSetCurrentUser();
-  useRedirect('loggedIn')
+  useRedirect('loggedIn');
 
-  const [SignInData, setSignInData] = useState({
+  const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   });
 
-  const { username, password} = SignInData;
+  const { username, password} = signInData;
 
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
 
-  const handleChange = (event) => {
-      setSignInData({
-      ...SignInData,
-      [event.target.name]: event.target.value,
-      });
-  };
-
   const handleSubmit = async (event) => {
       event.preventDefault();
       try {
-        const {data} = await axios.post("/dj-rest-auth/login/", SignInData);
+        const {data} = await axios.post("/dj-rest-auth/login/", signInData);
         setCurrentUser(data.user);
+        setTokenTimestamp(data);
         history.goBack();
       } catch (err) {
         setErrors(err.response?.data);
       }
+  };
+
+  const handleChange = (event) => {
+    setSignInData({
+    ...signInData,
+    [event.target.name]: event.target.value,
+    });
   };
 
   return (
@@ -118,6 +120,6 @@ const SignInForm = () => {
       </Col>
     </Row>
   );
-};
+}
 
 export default SignInForm;
