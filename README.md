@@ -1,6 +1,6 @@
 
 <div align=center>
-<h1><strong>Project 5 - ReadRave a Book Review Application </strong></h1>
+<h1><strong>Project 5 - ReadRave a Book Review Application V2</strong></h1>
  
 *Advanced frontend project* <br>
 
