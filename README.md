@@ -15,7 +15,6 @@
 
 </div>
 
-# ReadRave a Book Review Application
 A platform and a community for readers that allows you to review books and follow other readers for recommendations.
 
 **PLASE NOTE!:** 
